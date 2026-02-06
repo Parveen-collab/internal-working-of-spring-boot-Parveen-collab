@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @ConditionalOnProperty(name = "payment.provider", havingValue = "stripe")
 public class StripePaymentService implements PaymentService{
 
-    @Override
+    @Override // it tells java that this method is coming from other file
     public String pay() {
         String payment = "Stripe Payment";
         System.out.println("Paying from..."+payment);
